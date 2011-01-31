@@ -77,3 +77,9 @@ input[type='text'] {
 	margin: 0;
 	padding: 0;
 }
+
+iframe {
+	width: 100%;
+	height: 300px;
+	clear: both;
+}
