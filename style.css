@@ -84,3 +84,7 @@ iframe {
 	clear: both;
 	display: none;
 }
+
+a.toggle {
+	font-weight: bold;
+}
