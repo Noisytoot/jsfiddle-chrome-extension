@@ -26,14 +26,30 @@ Spark.ready(function() {
 				}
 				
 				// Build the HTML string (I know its a mess, I will clean it up soon)
-				built += '<li><a href="' + list[l].url + '" target="_blank"><strong>' + list[l].title + revision + '</strong></a>' + ((list[l].description != '') ? ' - ' + list[l].description : '') + '<br /><a href="javascript:void(0)" class="toggle" id="' + l + '">Toggle editor</a><iframe id="' + l + '" src="' + list[l].url + ((list[l].version >= 1) ? list[l].version + '/' : '') + 'embedded/"></iframe></li>';
+				built += '<li><a href="' + list[l].url + '" target="_blank"><strong>' + list[l].title + revision + '</strong></a>' + ((list[l].description != '') ? ' - ' + list[l].description : '') + '<br /><a href="javascript:void(0)" class="toggle" id="e' + l + '">Toggle editor</a><iframe id="e' + l + '" style="display: none" src="' + list[l].url + ((list[l].version >= 1) ? list[l].version + '/' : '') + 'embedded/"></iframe></li>';
 			}
 			
 			// Drop the built HTML into the UL
 			Spark('ul').content(built);
 			
 			// Fade the fiddles in
-			Spark('div#viewFiddle').transition('fadein', 300);
+			Spark('div#viewFiddle').transition('fadein', 300, function() {
+				// Listen for a click of a toggle editor link
+				Spark('a.toggle').event('click', function(e) {
+					// Get the iframe
+					var el = Spark('iframe#' + e.target.id).attribute();
+					
+					// Check if we need to slide up or down
+					if(Spark(el).css().display == 'none') {
+						// Show the appropriate iFrame
+						Spark(el).transition('fadein');
+					}
+					else {
+						// Hide the appropriate iFrame
+						Spark(el).transition('fadeout');
+					}
+				});
+			});
 		});
 	}
 	
@@ -48,11 +64,6 @@ Spark.ready(function() {
 		Spark('div#createFiddle').transition('fadeout', 300, function() {
 			Spark('div#viewFiddle').transition('fadein', 300);
 		});
-	});
-	
-	// Set up the toggle of the editor
-	Spark('a.toggle').event('click', function(e) {
-		var fiddle = e.target.id;
 	});
 });
 
