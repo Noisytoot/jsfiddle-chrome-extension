@@ -25,8 +25,8 @@ Spark.ready(function() {
 					revision = '';
 				}
 				
-				// Build the HTML string
-				built += '<li><a href="' + list[l].url + '" target="_blank"><strong>' + list[l].title + revision + '</strong></a> - ' + list[l].description + '</li>';
+				// Build the HTML string (I know its a mess, I will clean it up soon)
+				built += '<li><a href="' + list[l].url + '" target="_blank"><strong>' + list[l].title + revision + '</strong></a>' + ((list[l].description != '') ? ' - ' + list[l].description : '') + '<iframe src="' + list[l].url + ((list[l].version >= 1) ? list[l].version + '/' : '') + 'embedded/"></iframe></li>';
 			}
 			
 			// Drop the built HTML into the UL
