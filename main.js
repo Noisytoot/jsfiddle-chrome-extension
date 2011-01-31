@@ -26,7 +26,7 @@ Spark.ready(function() {
 				}
 				
 				// Build the HTML string (I know its a mess, I will clean it up soon)
-				built += '<li><a href="' + list[l].url + '" target="_blank"><strong>' + list[l].title + revision + '</strong></a>' + ((list[l].description != '') ? ' - ' + list[l].description : '') + '<br /><a href="javascript:void(0)" class="toggle" id="e' + l + '">Toggle editor</a><iframe id="e' + l + '" style="display: none" src="' + list[l].url + ((list[l].version >= 1) ? list[l].version + '/' : '') + 'embedded/"></iframe></li>';
+				built += '<li><a href="' + list[l].url + '" target="_blank"><strong>' + list[l].title + revision + '</strong></a>' + ((list[l].description != '') ? ' - ' + list[l].description : '') + '<br /><a href="javascript:void(0)" class="toggle" id="e' + l + '">Toggle editor</a><iframe id="e' + l + '" style="display: none">' + list[l].url + ((list[l].version >= 1) ? list[l].version + '/' : '') + 'embedded/</iframe></li>';
 			}
 			
 			// Drop the built HTML into the UL
@@ -41,6 +41,9 @@ Spark.ready(function() {
 					
 					// Check if we need to show or hide
 					if(Spark(el).css().display == 'none') {
+						// Load the page
+						el.src = el.innerHTML;
+						
 						// Show the appropriate iFrame
 						Spark(el).transition('fadein');
 					}
