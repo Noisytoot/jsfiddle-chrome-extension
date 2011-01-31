@@ -39,7 +39,7 @@ Spark.ready(function() {
 					// Get the iframe
 					var el = Spark('iframe#' + e.target.id).attribute();
 					
-					// Check if we need to slide up or down
+					// Check if we need to show or hide
 					if(Spark(el).css().display == 'none') {
 						// Show the appropriate iFrame
 						Spark(el).transition('fadein');
