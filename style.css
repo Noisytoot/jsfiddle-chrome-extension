@@ -82,6 +82,7 @@ iframe {
 	width: 100%;
 	height: 300px;
 	clear: both;
+	margin: 10px 0 10px 0;
 }
 
 a.toggle {
