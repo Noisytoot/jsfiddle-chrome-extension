@@ -87,6 +87,15 @@ function setupFiddles() {
 				
 				// Check if we need to show or hide
 				if(Spark(el).css().display == 'none') {
+					// Loop through all of the iframes
+					Spark('iframe').each(function(element) {
+						// If the current element's display is set to block
+						if(Spark(element).css().display == 'block') {
+							// Fade it out
+							Spark(element).transition('fadeout', 200);
+						}
+					});
+					
 					// Load the page
 					el.src = el.innerHTML;
 					
