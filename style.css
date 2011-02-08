@@ -88,11 +88,3 @@ iframe {
 a.toggle {
 	font-weight: bold;
 }
-
-div.tweet-container {
-	float: right;
-	margin: 5px;
-	height: 50px;
-	line-height: 50px;
-	vertical-align: middle;
-}
