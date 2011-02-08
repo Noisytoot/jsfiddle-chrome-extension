@@ -56,8 +56,23 @@ function setupFiddles() {
 				revision = '';
 			}
 			
-			// Build the HTML string (I know its a mess, I will clean it up soon)
-			built += '<li><a href="' + list[l].url + '" target="_blank"><strong>' + list[l].title + revision + '</strong></a>' + ((list[l].description != '') ? ' - ' + list[l].description : '') + '<br /><a href="javascript:void(0)" class="toggle" id="e' + l + '">Preview</a><iframe id="e' + l + '" style="display: none">' + list[l].url + list[l].latest_version + '/show/</iframe></li>';
+			// Build the HTML string
+			// Create the li and a to contain the fiddle link
+			built += '<li><a href="' + list[l].url + '" target="_blank">';
+			
+			//  Display the fiddles title and revision (revision set up above) and close the a
+			built += '<strong>' + list[l].title + revision + '</strong></a>';
+			
+			// Add the description with a dash if there is a description
+			built += ((list[l].description != '') ? ' - ' + list[l].description : '');
+			
+			// Break the line and add the preview link
+			built += '<br /><a href="javascript:void(0)" class="toggle" id="e' + l + '">Preview</a>';
+			
+			// Add the iframe with the url as its inner html, this is then loaded into the src via JavaScript when it is shown an
+			// If this strange method is not used then it lags when you open it because 30 iframes all load at once
+			// Finnaly, we close the li
+			built += '<iframe id="e' + l + '" style="display: none">' + list[l].url + list[l].latest_version + '/show/</iframe></li>';
 		}
 		
 		// Drop the built HTML into the UL
