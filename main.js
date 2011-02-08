@@ -18,8 +18,8 @@ Spark.ready(function() {
 			// Loop through all of the fiddles in the list
 			for(var l in list) {
 				// If there is a history show the latest one (this needs tweeking)
-				if(list[l].version >= 1) {
-					revision = ' (<a href="' + list[l].url + list[l].version + '/" target="_blank">Revision ' + list[l].version + '</a>)'
+				if(list[l].latest_version > list[l].version) {
+					revision = ' (<a href="' + list[l].url + list[l].latest_version + '/" target="_blank">Revision ' + list[l].latest_version + '</a>)'
 				}
 				else {
 					revision = '';
