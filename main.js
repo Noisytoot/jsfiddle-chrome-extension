@@ -23,14 +23,14 @@ Spark.ready(function() {
 	
 	// Set up the transitions between editing and viewing fiddles
 	Spark('a#openCreateFiddle').event('click', function() {
-		Spark('div#viewFiddle').transition('fadeout', 300, function() {
-			Spark('div#createFiddle').transition('fadein', 300);
+		Spark('div#viewFiddle').transition('fadeout', false, false, function() {
+			Spark('div#createFiddle').transition('fadein');
 		});
 	});
 	
 	Spark('a#openViewFiddle').event('click', function() {
-		Spark('div#createFiddle').transition('fadeout', 300, function() {
-			Spark('div#viewFiddle').transition('fadein', 300);
+		Spark('div#createFiddle').transition('fadeout', false, false, function() {
+			Spark('div#viewFiddle').transition('fadein');
 		});
 	});
 });
@@ -79,7 +79,7 @@ function setupFiddles() {
 		Spark('ul').html(built);
 		
 		// Fade the fiddles in
-		Spark('div#viewFiddle').transition('fadein', 300, function() {
+		Spark('div#viewFiddle').transition('fadein', false, false, function() {
 			// Listen for a click of a toggle editor link
 			Spark('a.toggle').event('click', function(e) {
 				// Get the iframe
@@ -92,7 +92,7 @@ function setupFiddles() {
 						// If the current element's display is set to block
 						if(Spark(element).css().display == 'block') {
 							// Fade it out
-							Spark(element).transition('fadeout', 200);
+							Spark(element).transition('fadeout');
 						}
 					});
 					
