@@ -12,7 +12,7 @@ Spark.ready(function() {
 			localStorage['username'] = e.target.value;
 			
 			// Show that it was set
-			Spark('h1#status').content('Username set to ' + e.target.value);
+			Spark('h1#status').html('Username set to ' + e.target.value);
 		}
 	});
 });
