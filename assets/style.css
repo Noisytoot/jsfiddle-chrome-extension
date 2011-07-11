@@ -28,7 +28,7 @@ a:hover {
 a.action {
 	position: relative;
 	display: block;
-	background: url(../assets/images/actions.png) 0 -26px no-repeat;
+	background: url(images/actions.png) 0 -26px no-repeat;
 	padding: 0 8px;
 	border: 1px solid #26445F;
 	font-size: .9em;
@@ -118,7 +118,8 @@ ul a:hover {
 	text-align: center;
 	-webkit-border-radius: 0 0 8px 8px;
 	border-radius: 0 0 8px 8px;
-	-webkit-background-clip: padding-box; background-clip: padding-box;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
 	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.3);
 	box-shadow: 0 0 4px rgba(0,0,0,.3);
 }
@@ -127,7 +128,7 @@ ul a:hover {
 header {
 	position: relative;
 	height: 36px;
-	background: url(../assets/images/top-bg.png);
+	background: url(images/top-bg.png);
 	padding: 8px 10px 0;
 }
 
@@ -144,7 +145,7 @@ header a.action:after {
 	right: 0;
 	width: 21px;
 	height: 26px;
-	background: url(../assets/images/actions.png) right -26px;
+	background: url(images/actions.png) right -26px;
 }
 
 header a.action:active:after {
@@ -156,7 +157,7 @@ header a.action:active:after {
 	width: 177px;
 	height: 25px;
 	margin-top: 2px;
-	background: url(../assets/images/logo.png);
+	background: url(images/logo.png);
 	text-indent: -999em;
 }
 
@@ -207,7 +208,7 @@ header a.action:active:after {
 	top: 1px;
 	right: 5px;
 	width: 77px;
-	background: url(../assets/images/actions.png) 0 -52px;
+	background: url(images/actions.png) 0 -52px;
 	line-height: 28px;
 	text-align: center;
 	font-size: .9em;
