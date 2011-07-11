@@ -1,6 +1,6 @@
 {
 	"name": "jsFiddle",
-	"version": "2.0",
+	"version": "2.0.0",
 	"description": "View your fiddles with their revisions and create fiddles directly from the extension.",
 	"options_page": "popup.html#/login",
 	"icons": {
