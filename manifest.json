@@ -3,9 +3,9 @@
 	"version": "2.0.0",
 	"description": "View your fiddles with their revisions and create fiddles directly from the extension.",
 	"icons": {
-		"16": "icons/icon-16.png",
-		"48": "icons/icon-48.png",
-		"128": "icons/icon-128.png"
+		"16": "assets/images/icon-16.png",
+		"48": "assets/images/icon-48.png",
+		"128": "assets/images/icon-128.png"
 	},
 	"browser_action": {
 		"default_icon": "assets/images/icon.png",
