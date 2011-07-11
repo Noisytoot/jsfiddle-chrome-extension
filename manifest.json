@@ -5,8 +5,8 @@
 	"options_page": "popup.html#/login",
 	"icons": {
 		"16": "icons/jsfiddle-16x16.png",
-    "48": "icons/jsfiddle-48x48.png",
-    "128": "icons/jsfiddle-128x128.png"
+		"48": "icons/jsfiddle-48x48.png",
+		"128": "icons/jsfiddle-128x128.png"
 	},
 	"browser_action": {
 		"default_icon": "icon.png",
