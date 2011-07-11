@@ -1,10 +1,12 @@
 {
 	"name": "jsFiddle",
-	"version": "1.7.5",
+	"version": "2.0",
 	"description": "View your fiddles with their revisions and create fiddles directly from the extension.",
-	"options_page": "options.html",
+	"options_page": "popup.html#/login",
 	"icons": {
-		"128": "icon.png"
+		"16": "icons/jsfiddle-16x16.png",
+    "48": "icons/jsfiddle-48x48.png",
+    "128": "icons/jsfiddle-128x128.png"
 	},
 	"browser_action": {
 		"default_icon": "icon.png",
