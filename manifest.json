@@ -11,6 +11,7 @@
 		"popup": "popup.html"
 	},
 	"permissions": [
-		"http://jsfiddle.net/"
+		"http://jsfiddle.net/",
+		"https://jsfiddle.net"
 	]
 }
